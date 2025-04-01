@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت - لاستیک جان جان</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../main/main.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#dc2626',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IranSans:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'IranSans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800 bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-900 text-white shadow-lg">
+            <div class="p-4 border-b border-gray-800">
+                <h1 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-tire mr-2"></i>
+                    مدیریت لاستیک جان جان
+                </h1>
+            </div>
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#dashboard" class="flex items-center p-2 rounded-lg bg-primary text-white">
+                            <i class="fas fa-tachometer-alt ml-2"></i>
+                            پیشخوان
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-box-open ml-2"></i>
+                            مدیریت محصولات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#brands" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-tags ml-2"></i>
+                            مدیریت برندها
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-concierge-bell ml-2"></i>
+                            مدیریت خدمات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#content" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-edit ml-2"></i>
+                            مدیریت محتوا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#orders" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-shopping-cart ml-2"></i>
+                            مدیریت سفارشات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-cog ml-2"></i>
+                            تنظیمات
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-auto">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow-sm p-4 flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold" id="pageTitle">پیشخوان</h2>
+                </div>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="relative">
+                        <button class="text-gray-600">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span
+                                class="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="User" class="w-8 h-8 rounded-full">
+                        <span class="mr-2">مدیر سیستم</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <main class="p-6">
+                <!-- Dashboard Section -->
+                <section id="dashboardContent">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-gray-500">محصولات</p>
+                                    <h3 class="text-2xl font-bold">24</h3>
+                                </div>
+                                <div class="text-primary text-3xl">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-gray-500">سفارشات امروز</p>
+                                    <h3 class="text-2xl font-bold">5</h3>
+                                </div>
+                                <div class="text-primary text-3xl">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-gray-500">درآمد امروز</p>
+                                    <h3 class="text-2xl font-bold">12,450,000 تومان</h3>
+                                </div>
+                                <div class="text-primary text-3xl">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-gray-500">بازدید امروز</p>
+                                    <h3 class="text-2xl font-bold">143</h3>
+                                </div>
+                                <div class="text-primary text-3xl">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-lg font-bold mb-4">آخرین سفارشات</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full">
+                                    <thead>
+                                        <tr class="border-b">
+                                            <th class="text-right py-2">شماره سفارش</th>
+                                            <th class="text-right py-2">مبلغ</th>
+                                            <th class="text-right py-2">وضعیت</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td class="py-2">ORD-1001</td>
+                                            <td class="py-2">6,200,000 تومان</td>
+                                            <td class="py-2"><span
+                                                    class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">تکمیل
+                                                    شده</span></td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2">ORD-1002</td>
+                                            <td class="py-2">4,290,000 تومان</td>
+                                            <td class="py-2"><span
+                                                    class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">در
+                                                    حال پردازش</span></td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2">ORD-1003</td>
+                                            <td class="py-2">11,500,000 تومان</td>
+                                            <td class="py-2"><span
+                                                    class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">ارسال
+                                                    شده</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-lg font-bold mb-4">آخرین محصولات اضافه شده</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center border-b pb-4">
+                                    <img src="https://via.placeholder.com/60" alt="Product"
+                                        class="w-12 h-12 rounded ml-3">
+                                    <div>
+                                        <h4 class="font-medium">تایر بارز مدل ۴۲۱</h4>
+                                        <p class="text-gray-600 text-sm">4,290,000 تومان</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center border-b pb-4">
+                                    <img src="https://via.placeholder.com/60" alt="Product"
+                                        class="w-12 h-12 rounded ml-3">
+                                    <div>
+                                        <h4 class="font-medium">تایر کویر مدل ۲۰۲</h4>
+                                        <p class="text-gray-600 text-sm">3,800,000 تومان</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://via.placeholder.com/60" alt="Product"
+                                        class="w-12 h-12 rounded ml-3">
+                                    <div>
+                                        <h4 class="font-medium">تایر رودکس مدل RX88</h4>
+                                        <p class="text-gray-600 text-sm">5,500,000 تومان</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Products Management Section -->
+                <section id="productsContent" class="hidden">
+                    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                        <div class="p-4 border-b flex justify-between items-center">
+                            <h3 class="text-lg font-bold">مدیریت محصولات</h3>
+                            <button id="addProductBtn"
+                                class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition">
+                                افزودن محصول جدید
+                            </button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="text-right py-3 px-4">تصویر</th>
+                                        <th class="text-right py-3 px-4">نام محصول</th>
+                                        <th class="text-right py-3 px-4">برند</th>
+                                        <th class="text-right py-3 px-4">قیمت</th>
+                                        <th class="text-right py-3 px-4">موجودی</th>
+                                        <th class="text-right py-3 px-4">عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productsTableBody">
+                                    <!-- Products will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add/Edit Product Modal -->
+                <div id="productModal"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+                    <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl max-h-screen overflow-y-auto">
+                        <div class="p-4 border-b flex justify-between items-center">
+                            <h3 class="text-lg font-bold" id="productModalTitle">افزودن محصول جدید</h3>
+                            <button id="closeProductModal" class="text-gray-600">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <form id="productForm">
+                                <input type="hidden" id="productId">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="productName" class="block text-gray-700 font-medium mb-2">نام
+                                            محصول</label>
+                                        <input type="text" id="productName"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="productBrand"
+                                            class="block text-gray-700 font-medium mb-2">برند</label>
+                                        <select id="productBrand"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                            <option value="">انتخاب برند</option>
+                                            <option value="بارز">بارز</option>
+                                            <option value="کویر">کویر</option>
+                                            <option value="رودکس">رودکس</option>
+                                            <option value="فارود">فارود</option>
+                                            <option value="کره‌ای">کره‌ای</option>
+                                            <option value="چینی">چینی</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="productPrice" class="block text-gray-700 font-medium mb-2">قیمت
+                                            (تومان)</label>
+                                        <input type="number" id="productPrice"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="productStock"
+                                            class="block text-gray-700 font-medium mb-2">موجودی</label>
+                                        <input type="number" id="productStock"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="productDescription"
+                                            class="block text-gray-700 font-medium mb-2">توضیحات</label>
+                                        <textarea id="productDescription" rows="3"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="productImage" class="block text-gray-700 font-medium mb-2">تصویر
+                                            محصول</label>
+                                        <div class="flex items-center">
+                                            <input type="file" id="productImage" class="hidden" accept="image/*">
+                                            <button type="button" id="uploadImageBtn"
+                                                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                                                انتخاب تصویر
+                                            </button>
+                                            <span id="imageFileName" class="mr-3 text-gray-600">تصویری انتخاب
+                                                نشده</span>
+                                        </div>
+                                        <div id="imagePreview" class="mt-3 hidden">
+                                            <img id="previewImage" src="#" alt="Preview"
+                                                class="h-32 object-contain border rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-end space-x-4 space-x-reverse">
+                                    <button type="button" id="cancelProductBtn"
+                                        class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg transition">
+                                        انصراف
+                                    </button>
+                                    <button type="submit"
+                                        class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                                        ذخیره محصول
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brands Management Section -->
+                <section id="brandsContent" class="hidden">
+                    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                        <div class="p-4 border-b flex justify-between items-center">
+                            <h3 class="text-lg font-bold">مدیریت برندها</h3>
+                            <button id="addBrandBtn"
+                                class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition">
+                                افزودن برند جدید
+                            </button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="text-right py-3 px-4">لوگو</th>
+                                        <th class="text-right py-3 px-4">نام برند</th>
+                                        <th class="text-right py-3 px-4">تعداد محصولات</th>
+                                        <th class="text-right py-3 px-4">عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="brandsTableBody">
+                                    <!-- Brands will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add/Edit Brand Modal -->
+                <div id="brandModal"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+                    <div class="bg-white rounded-lg shadow-lg w-full max-w-md max-h-screen overflow-y-auto">
+                        <div class="p-4 border-b flex justify-between items-center">
+                            <h3 class="text-lg font-bold" id="brandModalTitle">افزودن برند جدید</h3>
+                            <button id="closeBrandModal" class="text-gray-600">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <form id="brandForm">
+                                <input type="hidden" id="brandId">
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="brandName" class="block text-gray-700 font-medium mb-2">نام
+                                            برند</label>
+                                        <input type="text" id="brandName"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="brandCountry" class="block text-gray-700 font-medium mb-2">کشور
+                                            سازنده</label>
+                                        <input type="text" id="brandCountry"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="brandDescription"
+                                            class="block text-gray-700 font-medium mb-2">توضیحات</label>
+                                        <textarea id="brandDescription" rows="3"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                                    </div>
+                                    <div>
+                                        <label for="brandLogo" class="block text-gray-700 font-medium mb-2">لوگوی
+                                            برند</label>
+                                        <div class="flex items-center">
+                                            <input type="file" id="brandLogo" class="hidden" accept="image/*">
+                                            <button type="button" id="uploadLogoBtn"
+                                                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                                                انتخاب لوگو
+                                            </button>
+                                            <span id="logoFileName" class="mr-3 text-gray-600">تصویری انتخاب نشده</span>
+                                        </div>
+                                        <div id="logoPreview" class="mt-3 hidden">
+                                            <img id="previewLogo" src="#" alt="Preview"
+                                                class="h-32 object-contain border rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-end space-x-4 space-x-reverse">
+                                    <button type="button" id="cancelBrandBtn"
+                                        class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg transition">
+                                        انصراف
+                                    </button>
+                                    <button type="submit"
+                                        class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                                        ذخیره برند
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Management Section -->
+                <section id="servicesContent" class="hidden">
+                    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                        <div class="p-4 border-b flex justify-between items-center">
+                            <h3 class="text-lg font-bold">مدیریت خدمات</h3>
+                            <button id="addServiceBtn"
+                                class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition">
+                                افزودن خدمت جدید
+                            </button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="text-right py-3 px-4">نام خدمت</th>
+                                        <th class="text-right py-3 px-4">قیمت</th>
+                                        <th class="text-right py-3 px-4">توضیحات</th>
+                                        <th class="text-right py-3 px-4">عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="servicesTableBody">
+                                    <!-- Services will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add/Edit Service Modal -->
+                <div id="serviceModal"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+                    <div class="bg-white rounded-lg shadow-lg w-full max-w-md max-h-screen overflow-y-auto">
+                        <div class="p-4 border-b flex justify-between items-center">
+                            <h3 class="text-lg font-bold" id="serviceModalTitle">افزودن خدمت جدید</h3>
+                            <button id="closeServiceModal" class="text-gray-600">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <form id="serviceForm">
+                                <input type="hidden" id="serviceId">
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="serviceName" class="block text-gray-700 font-medium mb-2">نام
+                                            خدمت</label>
+                                        <input type="text" id="serviceName"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="servicePrice" class="block text-gray-700 font-medium mb-2">قیمت
+                                            (تومان)</label>
+                                        <input type="number" id="servicePrice"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="serviceIcon"
+                                            class="block text-gray-700 font-medium mb-2">آیکون</label>
+                                        <select id="serviceIcon"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                            <option value="fa-tire">تایر</option>
+                                            <option value="fa-sync-alt">بالانس</option>
+                                            <option value="fa-tools">ابزار</option>
+                                            <option value="fa-exclamation-triangle">هشدار</option>
+                                            <option value="fa-car">خودرو</option>
+                                            <option value="fa-cog">تنظیمات</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="serviceDescription"
+                                            class="block text-gray-700 font-medium mb-2">توضیحات</label>
+                                        <textarea id="serviceDescription" rows="3"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-end space-x-4 space-x-reverse">
+                                    <button type="button" id="cancelServiceBtn"
+                                        class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg transition">
+                                        انصراف
+                                    </button>
+                                    <button type="submit"
+                                        class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                                        ذخیره خدمت
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Management Section -->
+                <section id="contentContent" class="hidden">
+                    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                        <div class="p-4 border-b">
+                            <h3 class="text-lg font-bold">مدیریت محتوای صفحه اصلی</h3>
+                        </div>
+                        <div class="p-6">
+                            <form id="contentForm">
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="heroTitle" class="block text-gray-700 font-medium mb-2">عنوان
+                                            اصلی</label>
+                                        <input type="text" id="heroTitle"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                            value="فروش تایر و خدمات فنی خودرو در قم">
+                                    </div>
+                                    <div>
+                                        <label for="heroDescription"
+                                            class="block text-gray-700 font-medium mb-2">توضیحات اصلی</label>
+                                        <textarea id="heroDescription" rows="2"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">بهترین قیمت تایرهای ایرانی، چینی و کره‌ای با نصب تخصصی و گارانتی معتبر</textarea>
+                                    </div>
+                                    <div>
+                                        <label for="heroImage" class="block text-gray-700 font-medium mb-2">تصویر
+                                            اصلی</label>
+                                        <div class="flex items-center">
+                                            <input type="file" id="heroImage" class="hidden" accept="image/*">
+                                            <button type="button" id="uploadHeroImageBtn"
+                                                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                                                انتخاب تصویر
+                                            </button>
+                                            <span id="heroImageFileName" class="mr-3 text-gray-600">تصویر فعلی استفاده
+                                                می‌شود</span>
+                                        </div>
+                                        <div id="heroImagePreview" class="mt-3">
+                                            <img id="previewHeroImage"
+                                                src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785"
+                                                alt="Preview" class="h-32 object-contain border rounded">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-medium mb-2">دکمه‌های اصلی</label>
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label for="btn1Text" class="block text-gray-600 mb-1">متن دکمه
+                                                    اول</label>
+                                                <input type="text" id="btn1Text"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    value="مشاهده تایرها">
+                                            </div>
+                                            <div>
+                                                <label for="btn1Link" class="block text-gray-600 mb-1">لینک دکمه
+                                                    اول</label>
+                                                <input type="text" id="btn1Link"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg" value="#tires">
+                                            </div>
+                                            <div>
+                                                <label for="btn2Text" class="block text-gray-600 mb-1">متن دکمه
+                                                    دوم</label>
+                                                <input type="text" id="btn2Text"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    value="رزرو نوبت">
+                                            </div>
+                                            <div>
+                                                <label for="btn2Link" class="block text-gray-600 mb-1">لینک دکمه
+                                                    دوم</label>
+                                                <input type="text" id="btn2Link"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    value="#contact">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="aboutText" class="block text-gray-700 font-medium mb-2">متن درباره
+                                            ما</label>
+                                        <textarea id="aboutText" rows="4"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">لاستیک جان جان با بیش از ۱۵ سال سابقه در زمینه فروش تایر و ارائه خدمات فنی خودرو، مفتخر است که با بهره‌گیری از کادری مجرب و استفاده از بهترین تجهیزات، خدمات با کیفیتی را به مشتریان عزیز ارائه می‌دهد. ما نمایندگی رسمی چندین برند معتبر تایر در ایران هستیم و تمامی محصولات ما دارای گارانتی معتبر می‌باشند.</textarea>
+                                    </div>
+                                    <div>
+                                        <label for="contactInfo" class="block text-gray-700 font-medium mb-2">اطلاعات
+                                            تماس</label>
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label for="contactPhone" class="block text-gray-600 mb-1">تلفن</label>
+                                                <input type="text" id="contactPhone"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    value="۰۹۱۲۲۵۱۴۰۵۳">
+                                            </div>
+                                            <div>
+                                                <label for="contactAddress"
+                                                    class="block text-gray-600 mb-1">آدرس</label>
+                                                <input type="text" id="contactAddress"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    value="قم، زنبیل آباد، ۲۰ متری امام حسین، سرشاه آبادی، لاستیک جان جان">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-end">
+                                    <button type="submit"
+                                        class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                                        ذخیره تغییرات
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Orders Management Section -->
+                <section id="ordersContent" class="hidden">
+                    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                        <div class="p-4 border-b">
+                            <h3 class="text-lg font-bold">مدیریت سفارشات</h3>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="text-right py-3 px-4">شماره سفارش</th>
+                                        <th class="text-right py-3 px-4">مشتری</th>
+                                        <th class="text-right py-3 px-4">تاریخ</th>
+                                        <th class="text-right py-3 px-4">مبلغ</th>
+                                        <th class="text-right py-3 px-4">وضعیت</th>
+                                        <th class="text-right py-3 px-4">عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ordersTableBody">
+                                    <!-- Orders will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settingsContent" class="hidden">
+                    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                        <div class="p-4 border-b">
+                            <h3 class="text-lg font-bold">تنظیمات سیستم</h3>
+                        </div>
+                        <div class="p-6">
+                            <form id="settingsForm">
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="siteName" class="block text-gray-700 font-medium mb-2">نام
+                                            سایت</label>
+                                        <input type="text" id="siteName"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                            value="لاستیک جان جان">
+                                    </div>
+                                    <div>
+                                        <label for="siteLogo" class="block text-gray-700 font-medium mb-2">لوگوی
+                                            سایت</label>
+                                        <div class="flex items-center">
+                                            <input type="file" id="siteLogo" class="hidden" accept="image/*">
+                                            <button type="button" id="uploadSiteLogoBtn"
+                                                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                                                انتخاب لوگو
+                                            </button>
+                                            <span id="siteLogoFileName" class="mr-3 text-gray-600">لوگوی فعلی استفاده
+                                                می‌شود</span>
+                                        </div>
+                                        <div id="siteLogoPreview" class="mt-3">
+                                            <img id="previewSiteLogo" src="#" alt="Preview"
+                                                class="h-20 object-contain border rounded">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="siteDescription"
+                                            class="block text-gray-700 font-medium mb-2">توضیحات سایت</label>
+                                        <textarea id="siteDescription" rows="2"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">فروش تایر و خدمات خودرو در قم</textarea>
+                                    </div>
+                                    <div>
+                                        <label for="siteTheme" class="block text-gray-700 font-medium mb-2">رنگ تم
+                                            سایت</label>
+                                        <select id="siteTheme"
+                                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                            <option value="blue">آبی</option>
+                                            <option value="red">قرمز</option>
+                                            <option value="green">سبز</option>
+                                            <option value="purple">بنفش</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-medium mb-2">شبکه‌های اجتماعی</label>
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label for="instagramLink"
+                                                    class="block text-gray-600 mb-1">اینستاگرام</label>
+                                                <input type="text" id="instagramLink"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    placeholder="لینک اینستاگرام">
+                                            </div>
+                                            <div>
+                                                <label for="telegramLink"
+                                                    class="block text-gray-600 mb-1">تلگرام</label>
+                                                <input type="text" id="telegramLink"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    placeholder="لینک تلگرام">
+                                            </div>
+                                            <div>
+                                                <label for="whatsappLink"
+                                                    class="block text-gray-600 mb-1">واتساپ</label>
+                                                <input type="text" id="whatsappLink"
+                                                    class="w-full p-2 border border-gray-300 rounded-lg"
+                                                    placeholder="شماره واتساپ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-end">
+                                    <button type="submit"
+                                        class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                                        ذخیره تنظیمات
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for demonstration
+        const products = [
+            { id: 1, name: "تایر بارز مدل ۴۲۱", brand: "بارز", price: 4290000, stock: 15, description: "ایرانی - تمام فصل - سایز ۱۸۵/۶۵R۱۵", image: "https://via.placeholder.com/250x250?text=تایر+بارز" },
+            { id: 2, name: "تایر کویر مدل ۲۰۲", brand: "کویر", price: 3800000, stock: 8, description: "ایرانی - زمستانی - سایز ۱۹۵/۵۵R۱۵", image: "https://via.placeholder.com/250x250?text=تایر+کویر" },
+            { id: 3, name: "تایر رودکس مدل RX88", brand: "رودکس", price: 5500000, stock: 12, description: "چینی - تمام فصل - سایز ۲۰۵/۵۵R۱۶", image: "https://via.placeholder.com/250x250?text=تایر+رودکس" },
+            { id: 4, name: "تایر فارود مدل FT5", brand: "فارود", price: 6200000, stock: 5, description: "کره‌ای - تابستانی - سایز ۲۱۵/۶۰R۱۶", image: "https://via.placeholder.com/250x250?text=تایر+فارود" }
+        ];
+
+        const brands = [
+            { id: 1, name: "بارز", country: "ایران", description: "تایرهای ایرانی با کیفیت بالا", logo: "https://via.placeholder.com/150x80?text=بارز", productsCount: 5 },
+            { id: 2, name: "کویر", country: "ایران", description: "تایرهای زمستانی ایرانی", logo: "https://via.placeholder.com/150x80?text=کویر", productsCount: 3 },
+            { id: 3, name: "رودکس", country: "چین", description: "تایرهای چینی با قیمت مناسب", logo: "https://via.placeholder.com/150x80?text=رودکس", productsCount: 7 },
+            { id: 4, name: "فارود", country: "کره جنوبی", description: "تایرهای کره‌ای با کیفیت عالی", logo: "https://via.placeholder.com/150x80?text=فارود", productsCount: 4 }
+        ];
+
+        const services = [
+            { id: 1, name: "تعویض تایر", price: 150000, description: "تعویض تخصصی تایر با دستگاه تمام اتوماتیک", icon: "fa-tire" },
+            { id: 2, name: "بالانس چرخ", price: 120000, description: "بالانس چرخ با دستگاه دیجیتال پیشرفته", icon: "fa-sync-alt" },
+            { id: 3, name: "باز و بست رینگ", price: 180000, description: "خدمات تخصصی باز و بست رینگ‌های مختلف", icon: "fa-tools" },
+            { id: 4, name: "پنچرگیری", price: 80000, description: "تعمیر تایرهای پنچر با روش استاندارد", icon: "fa-exclamation-triangle" }
+        ];
+
+        const orders = [
+            { id: 1, customer: "علی محمدی", date: "۱۴۰۲/۰۵/۱۵", amount: 4290000, status: "تکمیل شده" },
+            { id: 2, customer: "رضا حسینی", date: "۱۴۰۲/۰۵/۱۶", amount: 5500000, status: "در حال پردازش" },
+            { id: 3, customer: "محمد کریمی", date: "۱۴۰۲/۰۵/۱۷", amount: 12400000, status: "ارسال شده" }
+        ];
+
+        // Navigation between sections
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = this.getAttribute('href').substring(1);
+
+                // Hide all sections
+                document.querySelectorAll('main > section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                // Show target section
+                document.getElementById(`${target}Content`).classList.remove('hidden');
+
+                // Update page title
+                document.getElementById('pageTitle').textContent = this.textContent;
+            });
+        });
+
+        // Products Management
+        function loadProducts() {
+            const storedProducts = getProductsFromStorage();
+            const tbody = document.getElementById('productsTableBody');
+            tbody.innerHTML = '';
+
+            storedProducts.forEach(product => {
+                tbody.innerHTML += `
+            <tr class="border-b">
+                <td class="py-3 px-4"><img src="${product.image}" alt="${product.name}" class="w-16 h-16 object-contain"></td>
+                <td class="py-3 px-4">${product.name}</td>
+                <td class="py-3 px-4">${product.brand}</td>
+                <td class="py-3 px-4">${product.price.toLocaleString()} تومان</td>
+                <td class="py-3 px-4">${product.stock}</td>
+                <td class="py-3 px-4">
+                    <button class="text-blue-500 hover:text-blue-700 edit-product" data-id="${product.id}">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="text-red-500 hover:text-red-700 delete-product" data-id="${product.id}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        `;
+            });
+
+            // اضافه کردن ایونت‌لیسنر برای دکمه‌های ویرایش و حذف
+            document.querySelectorAll('.edit-product').forEach(button => {
+                button.addEventListener('click', function () {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    editProduct(productId);
+                });
+            });
+
+            document.querySelectorAll('.delete-product').forEach(button => {
+                button.addEventListener('click', function () {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    if (confirm('آیا از حذف این محصول مطمئن هستید؟')) {
+                        deleteProduct(productId);
+                    }
+                });
+            });
+        }
+
+        // توابع کمکی برای مدیریت localStorage
+        function getProductsFromStorage() {
+            return JSON.parse(localStorage.getItem('tireProducts')) || products;
+        }
+
+        function saveProductsToStorage(products) {
+            localStorage.setItem('tireProducts', JSON.stringify(products));
+        }
+
+        function editProduct(id) {
+            const storedProducts = getProductsFromStorage();
+            const product = storedProducts.find(p => p.id === id);
+            if (product) {
+                document.getElementById('productModalTitle').textContent = 'ویرایش محصول';
+                document.getElementById('productId').value = product.id;
+                document.getElementById('productName').value = product.name;
+                document.getElementById('productBrand').value = product.brand;
+                document.getElementById('productPrice').value = product.price;
+                document.getElementById('productStock').value = product.stock;
+                document.getElementById('productDescription').value = product.description;
+
+                document.getElementById('imagePreview').classList.remove('hidden');
+                document.getElementById('previewImage').src = product.image;
+                document.getElementById('imageFileName').textContent = 'تصویر فعلی';
+
+                document.getElementById('productModal').classList.remove('hidden');
+            }
+        }
+
+        function deleteProduct(id) {
+            const storedProducts = getProductsFromStorage();
+            const updatedProducts = storedProducts.filter(p => p.id !== id);
+            saveProductsToStorage(updatedProducts);
+            loadProducts();
+            alert('محصول با موفقیت حذف شد');
+        }
+
+        document.getElementById('productForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const id = document.getElementById('productId').value;
+            const name = document.getElementById('productName').value;
+            const brand = document.getElementById('productBrand').value;
+            const price = parseInt(document.getElementById('productPrice').value);
+            const stock = parseInt(document.getElementById('productStock').value);
+            const description = document.getElementById('productDescription').value;
+            let image = document.getElementById('previewImage').src;
+
+            const storedProducts = getProductsFromStorage();
+
+            if (id) {
+                // ویرایش محصول موجود
+                const index = storedProducts.findIndex(p => p.id === parseInt(id));
+                if (index !== -1) {
+                    storedProducts[index] = {
+                        id: parseInt(id),
+                        name,
+                        brand,
+                        price,
+                        stock,
+                        description,
+                        image
+                    };
+                }
+            } else {
+                // افزودن محصول جدید
+                const newId = storedProducts.length > 0 ? Math.max(...storedProducts.map(p => p.id)) + 1 : 1;
+                storedProducts.push({
+                    id: newId,
+                    name,
+                    brand,
+                    price,
+                    stock,
+                    description,
+                    image
+                });
+            }
+
+            saveProductsToStorage(storedProducts);
+            alert('محصول با موفقیت ذخیره شد!');
+            document.getElementById('productModal').classList.add('hidden');
+            loadProducts();
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize with sample data if empty
+            if (!localStorage.getItem('tireProducts')) {
+                saveProductsToStorage(products);
+            }
+
+            loadProducts();
+            loadBrands();
+            loadServices();
+            loadOrders();
+        });
+
+        // بقیه کدها بدون تغییر (تا خط 529)
+        // Brands Management
+        function loadBrands() {
+            const tbody = document.getElementById('brandsTableBody');
+            tbody.innerHTML = '';
+
+            brands.forEach(brand => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b';
+                tr.innerHTML = `
+            <td class="py-3 px-4"><img src="${brand.logo}" alt="${brand.name}" class="w-16 h-16 object-contain"></td>
+            <td class="py-3 px-4">${brand.name}</td>
+            <td class="py-3 px-4">${brand.productsCount}</td>
+            <td class="py-3 px-4">
+                <button class="text-blue-500 hover:text-blue-700 edit-brand" data-id="${brand.id}">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="text-red-500 hover:text-red-700 delete-brand" data-id="${brand.id}">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        `;
+                tbody.appendChild(tr);
+            });
+
+            // Add event listeners to edit buttons
+            document.querySelectorAll('.edit-brand').forEach(button => {
+                button.addEventListener('click', function () {
+                    const brandId = parseInt(this.getAttribute('data-id'));
+                    editBrand(brandId);
+                });
+            });
+
+            // Add event listeners to delete buttons
+            document.querySelectorAll('.delete-brand').forEach(button => {
+                button.addEventListener('click', function () {
+                    const brandId = parseInt(this.getAttribute('data-id'));
+                    if (confirm('آیا از حذف این برند مطمئن هستید؟')) {
+                        deleteBrand(brandId);
+                    }
+                });
+            });
+        }
+
+        function editBrand(id) {
+            const brand = brands.find(b => b.id === id);
+            if (brand) {
+                document.getElementById('brandModalTitle').textContent = 'ویرایش برند';
+                document.getElementById('brandId').value = brand.id;
+                document.getElementById('brandName').value = brand.name;
+                document.getElementById('brandCountry').value = brand.country;
+                document.getElementById('brandDescription').value = brand.description;
+
+                document.getElementById('logoPreview').classList.remove('hidden');
+                document.getElementById('previewLogo').src = brand.logo;
+                document.getElementById('logoFileName').textContent = 'لوگوی فعلی';
+
+                document.getElementById('brandModal').classList.remove('hidden');
+            }
+        }
+
+        function deleteBrand(id) {
+            const index = brands.findIndex(b => b.id === id);
+            if (index !== -1) {
+                brands.splice(index, 1);
+                loadBrands();
+                alert('برند با موفقیت حذف شد');
+            }
+        }
+
+        document.getElementById('addBrandBtn').addEventListener('click', function () {
+            document.getElementById('brandModalTitle').textContent = 'افزودن برند جدید';
+            document.getElementById('brandForm').reset();
+            document.getElementById('brandId').value = '';
+            document.getElementById('logoPreview').classList.add('hidden');
+            document.getElementById('logoFileName').textContent = 'تصویری انتخاب نشده';
+            document.getElementById('brandModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeBrandModal').addEventListener('click', function () {
+            document.getElementById('brandModal').classList.add('hidden');
+        });
+
+        document.getElementById('cancelBrandBtn').addEventListener('click', function () {
+            document.getElementById('brandModal').classList.add('hidden');
+        });
+
+        document.getElementById('uploadLogoBtn').addEventListener('click', function () {
+            document.getElementById('brandLogo').click();
+        });
+
+        document.getElementById('brandLogo').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                document.getElementById('logoFileName').textContent = file.name;
+
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    document.getElementById('logoPreview').classList.remove('hidden');
+                    document.getElementById('previewLogo').src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('brandForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const id = document.getElementById('brandId').value;
+            const name = document.getElementById('brandName').value;
+            const country = document.getElementById('brandCountry').value;
+            const description = document.getElementById('brandDescription').value;
+
+            let logo = document.getElementById('previewLogo').src;
+            if (logo === '#') {
+                logo = 'https://via.placeholder.com/150x80?text=برند';
+            }
+
+            if (id) {
+                // Edit existing brand
+                const index = brands.findIndex(b => b.id === parseInt(id));
+                if (index !== -1) {
+                    brands[index] = {
+                        id: parseInt(id),
+                        name,
+                        country,
+                        description,
+                        logo,
+                        productsCount: brands[index].productsCount
+                    };
+                }
+            } else {
+                // Add new brand
+                const newId = brands.length > 0 ? Math.max(...brands.map(b => b.id)) + 1 : 1;
+                brands.push({
+                    id: newId,
+                    name,
+                    country,
+                    description,
+                    logo,
+                    productsCount: 0
+                });
+            }
+
+            loadBrands();
+            document.getElementById('brandModal').classList.add('hidden');
+            alert('برند با موفقیت ذخیره شد');
+        });
+
+        // Services Management
+        function loadServices() {
+            const tbody = document.getElementById('servicesTableBody');
+            tbody.innerHTML = '';
+
+            services.forEach(service => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b';
+                tr.innerHTML = `
+            <td class="py-3 px-4">${service.name}</td>
+            <td class="py-3 px-4">${service.price.toLocaleString()} تومان</td>
+            <td class="py-3 px-4">${service.description}</td>
+            <td class="py-3 px-4">
+                <button class="text-blue-500 hover:text-blue-700 edit-service" data-id="${service.id}">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="text-red-500 hover:text-red-700 delete-service" data-id="${service.id}">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        `;
+                tbody.appendChild(tr);
+            });
+
+            // Add event listeners to edit buttons
+            document.querySelectorAll('.edit-service').forEach(button => {
+                button.addEventListener('click', function () {
+                    const serviceId = parseInt(this.getAttribute('data-id'));
+                    editService(serviceId);
+                });
+            });
+
+            // Add event listeners to delete buttons
+            document.querySelectorAll('.delete-service').forEach(button => {
+                button.addEventListener('click', function () {
+                    const serviceId = parseInt(this.getAttribute('data-id'));
+                    if (confirm('آیا از حذف این خدمت مطمئن هستید؟')) {
+                        deleteService(serviceId);
+                    }
+                });
+            });
+        }
+
+        function editService(id) {
+            const service = services.find(s => s.id === id);
+            if (service) {
+                document.getElementById('serviceModalTitle').textContent = 'ویرایش خدمت';
+                document.getElementById('serviceId').value = service.id;
+                document.getElementById('serviceName').value = service.name;
+                document.getElementById('servicePrice').value = service.price;
+                document.getElementById('serviceIcon').value = service.icon;
+                document.getElementById('serviceDescription').value = service.description;
+
+                document.getElementById('serviceModal').classList.remove('hidden');
+            }
+        }
+
+        function deleteService(id) {
+            const index = services.findIndex(s => s.id === id);
+            if (index !== -1) {
+                services.splice(index, 1);
+                loadServices();
+                alert('خدمت با موفقیت حذف شد');
+            }
+        }
+
+        document.getElementById('addServiceBtn').addEventListener('click', function () {
+            document.getElementById('serviceModalTitle').textContent = 'افزودن خدمت جدید';
+            document.getElementById('serviceForm').reset();
+            document.getElementById('serviceId').value = '';
+            document.getElementById('serviceModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeServiceModal').addEventListener('click', function () {
+            document.getElementById('serviceModal').classList.add('hidden');
+        });
+
+        document.getElementById('cancelServiceBtn').addEventListener('click', function () {
+            document.getElementById('serviceModal').classList.add('hidden');
+        });
+
+        document.getElementById('serviceForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const id = document.getElementById('serviceId').value;
+            const name = document.getElementById('serviceName').value;
+            const price = parseInt(document.getElementById('servicePrice').value);
+            const icon = document.getElementById('serviceIcon').value;
+            const description = document.getElementById('serviceDescription').value;
+
+            if (id) {
+                // Edit existing service
+                const index = services.findIndex(s => s.id === parseInt(id));
+                if (index !== -1) {
+                    services[index] = {
+                        id: parseInt(id),
+                        name,
+                        price,
+                        icon,
+                        description
+                    };
+                }
+            } else {
+                // Add new service
+                const newId = services.length > 0 ? Math.max(...services.map(s => s.id)) + 1 : 1;
+                services.push({
+                    id: newId,
+                    name,
+                    price,
+                    icon,
+                    description
+                });
+            }
+
+            loadServices();
+            document.getElementById('serviceModal').classList.add('hidden');
+            alert('خدمت با موفقیت ذخیره شد');
+        });
+
+        // Orders Management
+        function loadOrders() {
+            const tbody = document.getElementById('ordersTableBody');
+            tbody.innerHTML = '';
+
+            orders.forEach(order => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b';
+                tr.innerHTML = `
+            <td class="py-3 px-4">ORD-${order.id.toString().padStart(4, '0')}</td>
+            <td class="py-3 px-4">${order.customer}</td>
+            <td class="py-3 px-4">${order.date}</td>
+            <td class="py-3 px-4">${order.amount.toLocaleString()} تومان</td>
+            <td class="py-3 px-4">
+                <span class="px-2 py-1 rounded text-sm ${order.status === 'تکمیل شده' ? 'bg-green-100 text-green-800' :
+                        order.status === 'در حال پردازش' ? 'bg-yellow-100 text-yellow-800' :
+                            'bg-blue-100 text-blue-800'
+                    }">${order.status}</span>
+            </td>
+            <td class="py-3 px-4">
+                <button class="text-blue-500 hover:text-blue-700">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </td>
+        `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Content Management
+        document.getElementById('uploadHeroImageBtn').addEventListener('click', function () {
+            document.getElementById('heroImage').click();
+        });
+
+        document.getElementById('heroImage').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                document.getElementById('heroImageFileName').textContent = file.name;
+
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    document.getElementById('previewHeroImage').src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('contentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('تغییرات محتوا با موفقیت ذخیره شد');
+        });
+
+        // Settings Management
+        document.getElementById('uploadSiteLogoBtn').addEventListener('click', function () {
+            document.getElementById('siteLogo').click();
+        });
+
+        document.getElementById('siteLogo').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                document.getElementById('siteLogoFileName').textContent = file.name;
+
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    document.getElementById('previewSiteLogo').src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('settingsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('تنظیمات با موفقیت ذخیره شد');
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize localStorage with sample data if empty
+            if (!localStorage.getItem('tireProducts')) {
+                localStorage.setItem('tireProducts', JSON.stringify(products));
+            }
+
+            loadProducts();
+            loadBrands();
+            loadServices();
+            loadOrders();
+        });
+    </script>
+</body>
+
+</html>

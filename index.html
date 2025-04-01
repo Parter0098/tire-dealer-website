@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لاستیک جان جان - فروش تایر و خدمات خودرو در قم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main/main.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#dc2626',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IranSans:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'IranSans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-primary">
+                    <i class="fas fa-tire mr-2"></i>لاستیک جان جان
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#home" class="hover:text-primary font-medium">خانه</a>
+                <a href="#tires" class="hover:text-primary font-medium">تایرها</a>
+                <a href="#brands" class="hover:text-primary font-medium">برندها</a>
+                <a href="#services" class="hover:text-primary font-medium">خدمات</a>
+                <a href="#contact" class="hover:text-primary font-medium">تماس</a>
+            </nav>
+
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="tel:09122514053"
+                    class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
+                    <i class="fas fa-phone ml-2"></i>09122514053
+                </a>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <a href="#cart" class="relative">
+                    <i class="fas fa-shopping-cart text-2xl text-gray-700"></i>
+                    <span
+                        class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">فروش تایر و خدمات فنی خودرو در <span
+                        class="text-primary">قم</span></h1>
+                <p class="text-xl mb-8">بهترین قیمت تایرهای ایرانی، چینی و کره‌ای با نصب تخصصی و گارانتی معتبر</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#tires"
+                        class="bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-lg text-center transition">
+                        مشاهده تایرها
+                    </a>
+                    <a href="#contact"
+                        class="bg-white hover:bg-gray-200 text-primary font-bold py-3 px-6 rounded-lg border border-primary text-center transition">
+                        رزرو نوبت
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785" alt="تایرهای با کیفیت"
+                    class="rounded-lg shadow-xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">برندهای موجود در فروشگاه</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">ما نمایندگی رسمی برندهای معتبر تایر در ایران هستیم
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=بارز" alt="بارز" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=کویر" alt="کویر" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=رودکس" alt="رودکس" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=فارود" alt="فارود" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=کره‌ای" alt="کره‌ای" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=چینی" alt="چینی" class="h-12 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tires -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="tireContainer">
+        <!-- محصولات به صورت خودکار توسط جاوااسکریپت پر می‌شوند -->
+    </div>
+
+    <div class="text-center mt-10">
+        <a href="#"
+            class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-lg transition">
+            مشاهده همه تایرها
+        </a>
+    </div>
+    </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">خدمات تخصصی ما</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">خدمات کامل فنی خودرو با گارانتی و ضمانت</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">تعویض تایر</h3>
+                    <p class="text-gray-600 mb-4">تعویض تخصصی تایر با دستگاه تمام اتوماتیک</p>
+                    <a href="#" class="text-primary font-medium hover:underline">اطلاعات بیشتر →</a>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">بالانس چرخ</h3>
+                    <p class="text-gray-600 mb-4">بالانس چرخ با دستگاه دیجیتال پیشرفته</p>
+                    <a href="#" class="text-primary font-medium hover:underline">اطلاعات بیشتر →</a>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">باز و بست رینگ</h3>
+                    <p class="text-gray-600 mb-4">خدمات تخصصی باز و بست رینگ‌های مختلف</p>
+                    <a href="#" class="text-primary font-medium hover:underline">اطلاعات بیشتر →</a>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">پنچرگیری</h3>
+                    <p class="text-gray-600 mb-4">تعمیر تایرهای پنچر با روش استاندارد</p>
+                    <a href="#" class="text-primary font-medium hover:underline">اطلاعات بیشتر →</a>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-primary text-white rounded-lg shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 flex items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">همین امروز نوبت بگیرید</h3>
+                            <p class="mb-6">برای دریافت خدمات می‌توانید به صورت آنلاین نوبت رزرو کنید</p>
+                            <a href="#contact"
+                                class="bg-white text-primary font-bold py-3 px-6 rounded-lg inline-block hover:bg-gray-100 transition">
+                                رزرو نوبت
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-white p-8 text-gray-800">
+                        <h3 class="text-xl font-bold mb-4">پیشنهادهای ویژه</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-accent text-white rounded-full w-6 h-6 flex items-center justify-center ml-3 mt-1 flex-shrink-0">%</span>
+                                <div>
+                                    <h4 class="font-bold">بالانس چرخ</h4>
+                                    <p class="text-gray-600">فقط ۱۵۰,۰۰۰ تومان - ۲۰% تخفیف</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-accent text-white rounded-full w-6 h-6 flex items-center justify-center ml-3 mt-1 flex-shrink-0">%</span>
+                                <div>
+                                    <h4 class="font-bold">پنچرگیری</h4>
+                                    <p class="text-gray-600">رایگان با خرید ۴ تایر</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">تماس با ما</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">برای دریافت مشاوره و اطلاعات بیشتر با ما در تماس
+                    باشید</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-6">فرم تماس</h3>
+
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">نام شما</label>
+                            <input type="text" id="name"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">شماره تماس</label>
+                            <input type="tel" id="phone"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">خدمات مورد نیاز</label>
+                            <select id="service"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>انتخاب خدمت</option>
+                                <option>خرید تایر</option>
+                                <option>تعویض تایر</option>
+                                <option>بالانس چرخ</option>
+                                <option>باز و بست رینگ</option>
+                                <option>پنچرگیری</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">پیام شما</label>
+                            <textarea id="message" rows="4"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-lg transition">
+                            ارسال پیام
+                        </button>
+                    </form>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md mb-6">
+                        <h3 class="text-2xl font-bold mb-6">اطلاعات تماس</h3>
+
+                        <div class="mb-6">
+                            <div class="flex items-start mb-4">
+                                <div class="text-primary ml-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">آدرس</h4>
+                                    <p class="text-gray-600">قم، زنبیل آباد، ۲۰ متری امام حسین، سرشاه آبادی، لاستیک جان
+                                        جان</p>
+                                    <a href="https://g.co/kgs/ZnD8tqz"
+                                        class="text-primary text-sm hover:underline mt-1 inline-block">مشاهده روی
+                                        نقشه</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start mb-4">
+                                <div class="text-primary ml-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">تلفن</h4>
+                                    <p class="text-gray-600">۰۹۱۲۲۵۱۴۰۵۳</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-64 bg-gray-200 rounded-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.722374787312!2d50.87941531513179!3d34.63551498044294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM4JzA3LjkiTiA1MMKwNTInNTQuMyJF!5e0!3m2!1sen!2sir!4v1620000000000!5m2!1sen!2sir"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">ساعات کاری</h3>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between">
+                                <span class="text-gray-600">شنبه تا چهارشنبه</span>
+                                <span class="font-medium">۸ صبح تا ۸ شب</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-600">پنجشنبه</span>
+                                <span class="font-medium">۸ صبح تا ۴ بعدازظهر</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-600">جمعه</span>
+                                <span class="font-medium">تعطیل</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="cartModal">
+        <div class="absolute right-0 top-0 h-full w-full md:w-1/2 lg:w-1/3 bg-white shadow-lg overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">سبد خرید</h3>
+                    <button id="closeCart" class="text-gray-600">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+
+                <div id="cartItems" class="space-y-4 mb-6">
+                    <!-- Cart items will be added here dynamically -->
+                    <p class="text-gray-500 text-center py-8">سبد خرید شما خالی است</p>
+                </div>
+
+                <div class="border-t border-gray-200 pt-4 mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span>جمع کل:</span>
+                        <span id="cartTotal" class="font-bold">۰ تومان</span>
+                    </div>
+                </div>
+
+                <button
+                    class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-lg transition disabled:opacity-50"
+                    id="checkoutBtn" disabled>
+                    تکمیل سفارش
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">لاستیک جان جان</h3>
+                    <p class="mb-4">معتبرترین مرکز فروش تایر و خدمات فنی خودرو در قم</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-white hover:text-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/989122514053" class="text-white hover:text-primary transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">لینک‌های سریع</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-primary transition">خانه</a></li>
+                        <li><a href="#tires" class="hover:text-primary transition">فروشگاه تایر</a></li>
+                        <li><a href="#brands" class="hover:text-primary transition">برندها</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">خدمات</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition">تماس</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">خدمات</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition">تعویض تایر</a></li>
+                        <li><a href="#" class="hover:text-primary transition">بالانس چرخ</a></li>
+                        <li><a href="#" class="hover:text-primary transition">باز و بست رینگ</a></li>
+                        <li><a href="#" class="hover:text-primary transition">پنچرگیری</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">تماس با ما</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 ml-3 text-primary"></i>
+                            <span>قم، زنبیل آباد، ۲۰ متری امام حسین، سرشاه آبادی</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 ml-3 text-primary"></i>
+                            <span>۰۹۱۲۲۵۱۴۰۵۳</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© ۱۴۰۲ لاستیک جان جان. تمام حقوق محفوظ است.</p>
+                <div class="flex space-x-6 space-x-reverse mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary transition">حریم خصوصی</a>
+                    <a href="#" class="hover:text-primary transition">قوانین و مقررات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function displayProducts() {
+            const products = JSON.parse(localStorage.getItem('tireProducts')) || [];
+            const tireContainer = document.getElementById('tireContainer');
+
+            if (products.length > 0) {
+                tireContainer.innerHTML = ''; // پاک کردن محتوای قبلی
+
+                products.forEach(product => {
+                    tireContainer.innerHTML += `
+                <div class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 p-6 flex items-center justify-center">
+                        <img src="${product.image}" alt="${product.name}" class="h-40 object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">${product.name}</h4>
+                        <p class="text-gray-600 mb-3">${product.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary text-xl">${product.price.toLocaleString()} تومان</span>
+                            <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition add-to-cart" 
+                                    data-id="${product.id}" 
+                                    data-name="${product.name}" 
+                                    data-price="${product.price}">
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+                });
+
+                // اضافه کردن ایونت‌لیسنر برای دکمه‌های افزودن به سبد خرید
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const id = this.getAttribute('data-id');
+                        const name = this.getAttribute('data-name');
+                        const price = parseInt(this.getAttribute('data-price'));
+
+                        // Check if item already in cart
+                        const existingItem = cart.find(item => item.id === id);
+
+                        if (existingItem) {
+                            existingItem.quantity += 1;
+                        } else {
+                            cart.push({
+                                id,
+                                name,
+                                price,
+                                quantity: 1
+                            });
+                        }
+
+                        updateCart();
+                        alert('محصول به سبد خرید اضافه شد');
+                    });
+                });
+            } else {
+                tireContainer.innerHTML = `
+            <div class="col-span-4 text-center py-8">
+                <p class="text-gray-500">هنوز محصولی اضافه نشده است.</p>
+            </div>
+        `;
+            }
+        }
+
+        // بارگذاری اولیه محصولات هنگام لود صفحه
+        document.addEventListener('DOMContentLoaded', function () {
+            displayProducts();
+
+            // بقیه کدهای مربوط به سبد خرید و ...
+        });
+
+        // Update cart UI
+        function updateCart() {
+            const cartItemsEl = document.getElementById('cartItems');
+            const cartTotalEl = document.getElementById('cartTotal');
+            const cartCountEl = document.querySelector('a[href="#cart"] span');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+
+            if (cart.length === 0) {
+                cartItemsEl.innerHTML = '<p class="text-gray-500 text-center py-8">سبد خرید شما خالی است</p>';
+                cartTotalEl.textContent = '۰ تومان';
+                cartCountEl.textContent = '0';
+                checkoutBtn.disabled = true;
+                return;
+            }
+
+            let total = 0;
+            let itemsHtml = '';
+
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                itemsHtml += `
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+                        <div>
+                            <h4 class="font-medium">${item.name}</h4>
+                            <p class="text-gray-600 text-sm">${item.price.toLocaleString()} تومان</p>
+                        </div>
+                        <div class="flex items-center">
+                            <button class="text-gray-500 px-2 remove-item" data-id="${item.id}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <span class="mx-2">${item.quantity}</span>
+                            <button class="text-gray-500 px-2 increase-item" data-id="${item.id}">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartItemsEl.innerHTML = itemsHtml;
+            cartTotalEl.textContent = total.toLocaleString() + ' تومان';
+            cartCountEl.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            checkoutBtn.disabled = false;
+
+            // Add event listeners to new buttons
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    cart = cart.filter(item => item.id !== id);
+                    updateCart();
+                });
+            });
+
+            document.querySelectorAll('.increase-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    const item = cart.find(item => item.id === id);
+                    if (item) {
+                        item.quantity += 1;
+                        updateCart();
+                    }
+                });
+            });
+        }
+
+        // Cart modal toggle
+        document.querySelector('a[href="#cart"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('cartModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeCart').addEventListener('click', function () {
+            document.getElementById('cartModal').classList.add('hidden');
+        });
+
+        // Close cart when clicking outside
+        document.getElementById('cartModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+
+        // Checkout button
+        document.getElementById('checkoutBtn').addEventListener('click', function () {
+            alert('سفارش شما با موفقیت ثبت شد. همکاران ما به زودی با شما تماس خواهند گرفت.');
+            cart = [];
+            updateCart();
+            document.getElementById('cartModal').classList.add('hidden');
+        });
+        // تابع برای ذخیره محصولات در localStorage
+        function saveProductsToLocalStorage(products) {
+            localStorage.setItem('tireProducts', JSON.stringify(products));
+        }
+
+        // تابع برای خواندن محصولات از localStorage
+        function getProductsFromLocalStorage() {
+            const products = JSON.parse(localStorage.getItem('tireProducts'));
+            return products || []; // اگر خالی بود آرایه خالی برگردان
+        }
+
+        // مثال: چگونه در صفحه اصلی از داده‌ها استفاده کنیم؟
+        document.addEventListener('DOMContentLoaded', function () {
+            const products = getProductsFromLocalStorage();
+
+            // اگر محصولی در localStorage وجود داشت، جایگزین محصولات پیش‌فرض کنید
+            if (products.length > 0) {
+                // اینجا کد نمایش محصولات در صفحه اصلی را بروزرسانی کنید
+                console.log('محصولات از localStorage بارگذاری شدند:', products);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const products = JSON.parse(localStorage.getItem('tireProducts')) || [];
+            const tireContainer = document.getElementById('tireContainer');
+
+            if (products.length > 0) {
+                tireContainer.innerHTML = ''; // پاک کردن محتوای قبلی
+
+                products.forEach(product => {
+                    tireContainer.innerHTML += `
+                <div class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gray-100 p-6 flex items-center justify-center">
+                        <img src="${product.image}" alt="${product.name}" class="h-40 object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">${product.name}</h4>
+                        <p class="text-gray-600 mb-3">${product.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-primary text-xl">${product.price.toLocaleString()} تومان</span>
+                            <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition add-to-cart" 
+                                    data-id="${product.id}" 
+                                    data-name="${product.name}" 
+                                    data-price="${product.price}">
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+                });
+            } else {
+                // اگر محصولی در localStorage نبود، محصولات پیش‌فرض نمایش داده شوند
+                tireContainer.innerHTML = `
+            <div class="col-span-4 text-center py-8">
+                <p class="text-gray-500">هنوز محصولی اضافه نشده است.</p>
+            </div>
+        `;
+            }
+        });
+    </script>
+</body>
+
+</html>
